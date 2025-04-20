@@ -1,0 +1,147 @@
+.showcase-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .showcase-header {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .showcase-subheader {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .filter-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .tab-button {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .tab-button.active {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .tab-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid #e0e0e0;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: #3498db;
+  }
+  
+  .feature-card.expanded {
+    grid-column: 1 / -1;
+  }
+  
+  .feature-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-icon {
+    font-size: 2rem;
+  }
+  
+  .feature-title {
+    margin: 0;
+    flex-grow: 1;
+    color: #2c3e50;
+  }
+  
+  .feature-arrow {
+    font-size: 1.2rem;
+  }
+  
+  .feature-description {
+    color: #7f8c8d;
+    margin: 0;
+  }
+  
+  .feature-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #ecf0f1;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .feature-details ul {
+    padding-left: 1.5rem;
+    color: #34495e;
+  }
+  
+  .feature-details li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .feature-preview {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+    color: #7f8c8d;
+  }
+  
+  .preview-box {
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @media (max-width: 768px) {
+    .features-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .filter-tabs {
+      flex-wrap: wrap;
+    }
+  }
