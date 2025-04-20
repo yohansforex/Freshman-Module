@@ -58,18 +58,33 @@ export default function Hero() {
               within a sleek and optimized interface.
             </p>
             <div className="mt-5 flex items-center gap-x-6">
-              <a
-                href="https://play.google.com/store/apps/details?id=com.freshmanmoduleplus&pli=1"
-                className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline  focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Download on Play store
-              </a>
-              <a
-                href="#"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline  focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-              >
-                Download on Apk pure
-              </a>
+            <a
+              href="https://play.google.com/store/apps/details?id=com.freshmanmoduleplus&pli=1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Download on Play Store
+            </a>
+
+            <a
+              href="https://apkpure.com/freshman-module-plus/com.freshmanmoduleplus"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Download on APKPure
+            </a>
+
+            <a
+              href="https://www.amazon.com/dp/B0F5MCKBQ7/ref=sr_1_1?crid=2R7I749YFN04X&dib=eyJ2IjoiMSJ9.HJfpHsHEPiCk2__Bqp5ktg.KDChO36Q_TyhJyUKQV_ApEW4mS6EXmXXW7ugdlRUj64&dib_tag=se&keywords=freshman+module+plus&qid=1745067366&sprefix=freshman+module+plus%2Caps%2C339&sr=8-1"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+            >
+              Download on Amazon App Store
+            </a>
+
             </div>
           </div>
           <div className="relative mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">

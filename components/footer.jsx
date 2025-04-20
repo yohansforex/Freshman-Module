@@ -63,9 +63,9 @@ const Footer = () => {
               <h4>Product</h4>
               <ul>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="#premium">Premium</a></li>
-                <li><a href="#updates">What's New</a></li>
+                <li><a href="#download">Descriptions</a></li>
+                <li><a href="#premium">Contacts</a></li>
+                <li><a href="#updates">What's New?</a></li>
               </ul>
             </div>
 
@@ -84,8 +84,6 @@ const Footer = () => {
               <ul>
                 <li><a href="#privacy">Privacy Policy</a></li>
                 <li><a href="#terms">Terms of Service</a></li>
-                <li><a href="#cookies">Cookie Policy</a></li>
-                <li><a href="#eula">EULA</a></li>
               </ul>
             </div>
           </div>
@@ -101,10 +99,6 @@ const Footer = () => {
           </div>
           
           <div className="footer-meta">
-            <a href="#sitemap">Sitemap</a>
-            <span className="divider">|</span>
-            <a href="#accessibility">Accessibility</a>
-            <span className="divider">|</span>
             <span className="version">v2.1.0</span>
           </div>
         </div>
