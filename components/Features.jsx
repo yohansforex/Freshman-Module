@@ -13,7 +13,7 @@ const screenshots = [
 
 const Features = () => {
   return (
-    <section className="w-full px-6 py-20 bg-white text-center">
+    <section className="w-full px-6 py-20 bg-linear-gradient-blue-600 text-center">
       <h2 className="text-4xl sm:text-5xl font-extrabold mb-10 text-blue-600">
         App Features
       </h2>

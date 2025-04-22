@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import './Css/Hero.css';
 
 const navigation = [
   { name: "Features", href: "#" },
@@ -15,17 +16,14 @@ export default function Hero() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="bg-white">
-      <div className="relative isolate pt-14">
-        <svg
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 h-full w-full stroke-gray-200 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
-        >
+    <div className="hero-container">
+      <div className="hero-content-wrapper">
+        <svg className="hero-bg-pattern" aria-hidden="true">
           <defs>
             <pattern
               x="50%"
               y={-1}
-              id="83fd4e5a-9d52-42fc-97b6-718e5d7ee527"
+              id="hero-pattern"
               width={200}
               height={200}
               patternUnits="userSpaceOnUse"
@@ -33,69 +31,66 @@ export default function Hero() {
               <path d="M100 200V.5M.5 .5H200" fill="none" />
             </pattern>
           </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
+          <svg x="50%" y={-1} className="hero-pattern-overflow">
             <path
               d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
               strokeWidth={0}
             />
           </svg>
           <rect
-            fill="url(#83fd4e5a-9d52-42fc-97b6-718e5d7ee527)"
+            fill="url(#hero-pattern)"
             width="100%"
             height="100%"
             strokeWidth={0}
           />
         </svg>
-        <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:flex lg:items-center lg:gap-x-10 lg:px-8 lg:py-40">
-          <div className="mx-auto max-w-2xl lg:mx-0 lg:flex-auto">
-            <h1 className="mt-0 max-w-lg text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Freshman Module Plus
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              The app includes updated freshman modules.It has an ai feature
+        
+        <div className="hero-main-content">
+          <div className="hero-text-content">
+            <h1 className="hero-title">Freshman Module Plus</h1>
+            <p className="hero-description">
+              The app includes updated freshman modules. It has an AI feature
               that will help you with your studies. Additionally, it offers
               advanced tools for scheduling, note-taking, and GPA tracking, all
               within a sleek and optimized interface.
             </p>
-            <div className="mt-5 flex items-center gap-x-6">
-            <a
-              href="https://play.google.com/store/apps/details?id=com.freshmanmoduleplus&pli=1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Download on Play Store
-            </a>
-
-            <a
-              href="https://apkpure.com/freshman-module-plus/com.freshmanmoduleplus"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Download on APKPure
-            </a>
-
-            <a
-              href="https://www.amazon.com/dp/B0F5MCKBQ7/ref=sr_1_1?crid=2R7I749YFN04X&dib=eyJ2IjoiMSJ9.HJfpHsHEPiCk2__Bqp5ktg.KDChO36Q_TyhJyUKQV_ApEW4mS6EXmXXW7ugdlRUj64&dib_tag=se&keywords=freshman+module+plus&qid=1745067366&sprefix=freshman+module+plus%2Caps%2C339&sr=8-1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="rounded-md bg-blue-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-            >
-              Download on Amazon App Store
-            </a>
-
+            <div className="hero-button-group">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.freshmanmoduleplus&pli=1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="download-button play-store-button"
+              >
+                Download on Play Store
+              </a>
+              <a
+                href="https://apkpure.com/freshman-module-plus/com.freshmanmoduleplus"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="download-button apkpure-button"
+              >
+                Download on APKPure
+              </a>
+              <a
+                href="https://www.amazon.com/dp/B0F5MCKBQ7/ref=sr_1_1?crid=2R7I749YFN04X&dib=eyJ2IjoiMSJ9.HJfpHsHEPiCk2__Bqp5ktg.KDChO36Q_TyhJyUKQV_ApEW4mS6EXmXXW7ugdlRUj64&dib_tag=se&keywords=freshman+module+plus&qid=1745067366&sprefix=freshman+module+plus%2Caps%2C339&sr=8-1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="download-button amazon-button"
+              >
+                Download on Amazon App Store
+              </a>
             </div>
           </div>
-          <div className="relative mt-16 sm:mt-24 lg:mt-0 lg:flex-shrink-0 lg:flex-grow">
+          
+          <div className="hero-phone-mockup">
             <svg
               role="img"
               viewBox="0 0 366 729"
-              className="mx-auto w-[22.875rem] max-w-full drop-shadow-xl"
+              className="primary-mockup"
             >
               <title>App screenshot</title>
               <defs>
-                <clipPath id="2ade4387-9c63-4fc4-b754-10e687a0d332">
+                <clipPath id="primary-phone-clip">
                   <rect rx={36} width={316} height={729} />
                 </clipPath>
               </defs>
@@ -110,21 +105,14 @@ export default function Hero() {
               <foreignObject
                 width={316}
                 height={729}
-                clipPath="url(#2ade4387-9c63-4fc4-b754-10e687a0d332)"
+                clipPath="url(#primary-phone-clip)"
                 transform="translate(24 24)"
               >
-                <div
-                  style={{
-                    width: "100%",
-                    height: "93%",
-                    borderRadius: "36px",
-                    overflow: "hidden",
-                  }}
-                >
+                <div className="phone-screen">
                   <img
                     alt="PDF Viewer Screenshot"
                     src="pdfview.jpg"
-                    style={{ width: "100%", height: "100%" }}
+                    className="phone-screen-image"
                   />
                 </div>
               </foreignObject>
@@ -132,7 +120,7 @@ export default function Hero() {
             <svg
               role="img"
               viewBox="0 0 366 729"
-              className="hidden lg:block absolute bottom-0 right-0 w-[22.875rem] max-w-full drop-shadow-xl -rotate-30 translate-x-[-20%] translate-y-[10%]"
+              className="secondary-mockup"
             >
               <title>Secondary App screenshot</title>
               <defs>
@@ -154,18 +142,11 @@ export default function Hero() {
                 clipPath="url(#secondary-phone-clip)"
                 transform="translate(24 24)"
               >
-                <div
-                  style={{
-                    width: "100%",
-                    height: "93%",
-                    borderRadius: "36px",
-                    overflow: "hidden",
-                  }}
-                >
+                <div className="phone-screen">
                   <img
                     alt="Menu Screen Screenshot"
                     src="menu.jpg"
-                    style={{ width: "100%", height: "100%" }}
+                    className="phone-screen-image"
                   />
                 </div>
               </foreignObject>
@@ -174,78 +155,76 @@ export default function Hero() {
         </div>
       </div>
 
-      <header className="absolute inset-x-0 top-0 z-50">
-        <nav
-          aria-label="Global"
-          className="flex items-center justify-between p-6 lg:px-8"
-        >
-          <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.0 p-1.5">
-              <img alt="" src="logo.png" className="rounded-full h-8 w-auto" />
+      <header className="hero-header">
+        <nav className="hero-nav">
+          <div className="nav-logo-container">
+            <a href="#" className="nav-logo-link">
+              <img alt="" src="logo.png" className="nav-logo" />
             </a>
           </div>
-          <div className="flex lg:hidden">
+          <div className="mobile-menu-button-container">
             <button
               type="button"
               onClick={() => setMobileMenuOpen(true)}
-              className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+              className="mobile-menu-button"
             >
               <span className="sr-only">Open main menu</span>
-              <Bars3Icon aria-hidden="true" className="h-6 w-6" />
+              <Bars3Icon className="menu-icon" />
             </button>
           </div>
-          <div className="hidden lg:flex lg:gap-x-12">
+          <div className="desktop-nav-menu">
             {navigation.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-sm font-semibold leading-6 text-gray-900"
+                className="nav-menu-item"
               >
                 {item.name}
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
+          <div className="nav-spacer"></div>
         </nav>
+        
         <Dialog
           open={mobileMenuOpen}
           onClose={setMobileMenuOpen}
-          className="lg:hidden"
+          className="mobile-menu-dialog"
         >
-          <div className="fixed inset-0 z-50" />
-          <DialogPanel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-            <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+          <div className="mobile-menu-overlay" />
+          <DialogPanel className="mobile-menu-panel">
+            <div className="mobile-menu-header">
+              <a href="#" className="mobile-menu-logo-link">
                 <span className="sr-only">Your Company</span>
                 <img
                   alt=""
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                  className="h-8 w-auto"
+                  className="mobile-menu-logo"
                 />
               </a>
               <button
                 type="button"
                 onClick={() => setMobileMenuOpen(false)}
-                className="-m-2.5 rounded-md p-2.5 text-gray-700"
+                className="mobile-menu-close-button"
               >
                 <span className="sr-only">Close menu</span>
-                <XMarkIcon aria-hidden="true" className="h-6 w-6" />
+                <XMarkIcon className="close-icon" />
               </button>
             </div>
-            <div className="mt-9 flow-root">
-              <div className="-my-6 divide-y divide-gray-500/10">
-                <div className="space-y-2 py-6">
+            <div className="mobile-menu-content">
+              <div className="mobile-menu-links">
+                <div className="mobile-menu-links-container">
                   {navigation.map((item) => (
                     <a
                       key={item.name}
                       href={item.href}
-                      className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                      className="mobile-menu-link"
                     >
                       {item.name}
                     </a>
                   ))}
                 </div>
-                <div className="py-6"></div>
+                <div className="mobile-menu-footer"></div>
               </div>
             </div>
           </DialogPanel>
