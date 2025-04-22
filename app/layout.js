@@ -18,3 +18,10 @@ export const metadata = {
     "google-site-verification": "FMEltww0kgh_XjH7tre_mLGoZqXSQ5Wb3NiBX4M5wUQ"
   }
 };
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+}
