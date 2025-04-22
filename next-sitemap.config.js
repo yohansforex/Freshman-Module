@@ -1,13 +1,6 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-    siteUrl: "https://freshman-module.vercel.app",
+    siteUrl: 'https://freshman-module.vercel.app', // 🔁 Replace with your real domain
     generateRobotsTxt: true,
-    robotsTxtOptions: {
-      policies: [
-        { userAgent: "*", allow: "/" },
-      ],
-      additionalSitemaps: [
-        "https://freshman-module.vercel.app/sitemap.xml",
-      ],
-    },
   };
   
