@@ -148,74 +148,77 @@ const Showcase = () => {
   };
 
   return (
-    <div className="showcase-container">
-      <h1 className="showcase-header">Freshman Module Plus Features Descritpion</h1>
-      <p className="showcase-subheader">Discover what's new in your ultimate study companion</p>
-      
-      <div className="filter-tabs">
-        <button 
-          className={`tab-button ${activeTab === 'all' ? 'active' : ''}`}
-          onClick={() => setActiveTab('all')}
-        >
-          All Features
-        </button>
-        <button 
-          className={`tab-button ${activeTab === 'ai' ? 'active' : ''}`}
-          onClick={() => setActiveTab('ai')}
-        >
-          AI Features
-        </button>
-        <button 
-          className={`tab-button ${activeTab === 'organization' ? 'active' : ''}`}
-          onClick={() => setActiveTab('organization')}
-        >
-          Organization
-        </button>
-      </div>
-      
-      <div className="features-grid">
-        {features[activeTab].map((feature) => (
-          <div 
-            key={feature.id}
-            className={`feature-card ${expandedFeature === feature.id ? 'expanded' : ''}`}
-            onClick={() => toggleFeature(feature.id)}
+    <section id="descriptions">
+          <div className="showcase-container">
+        <h1 className="showcase-header">Freshman Module Plus Features Descriptions</h1>
+        <p className="showcase-subheader">Discover what's new in your ultimate study companion</p>
+        
+        <div className="filter-tabs">
+          <button 
+            className={`tab-button ${activeTab === 'all' ? 'active' : ''}`}
+            onClick={() => setActiveTab('all')}
           >
-            <div className="feature-header">
-              <span className="feature-icon">{feature.icon}</span>
-              <h3 className="feature-title">{feature.title}</h3>
-              <span className="feature-arrow">
-                {expandedFeature === feature.id ? '▼' : '▶'}
-              </span>
-            </div>
-            <p className="feature-description">{feature.description}</p>
-            
-            {expandedFeature === feature.id && (
-              <div className="feature-details">
-                {Array.isArray(feature.details) ? (
-                  <ul>
-                    {feature.details.map((detail, index) => (
-                      <li key={index}>{detail}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p>{feature.details}</p>
-                )}
-                <div className="feature-preview">
-                  {/* Placeholder for actual feature preview */}
-                  <div className="preview-box">
-                    {feature.id === 'aiChat' && '🤖 AI Chat Interface Preview'}
-                    {feature.id === 'timetable' && '📅 Timetable Preview'}
-                    {feature.id === 'notes' && '📝 Notes Grid Preview'}
-                    {feature.id === 'pdf' && '📚 PDF Viewer Preview'}
-                    {feature.id === 'gpa' && '📊 GPA Tracker Preview'}
+            All Features
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'ai' ? 'active' : ''}`}
+            onClick={() => setActiveTab('ai')}
+          >
+            AI Features
+          </button>
+          <button 
+            className={`tab-button ${activeTab === 'organization' ? 'active' : ''}`}
+            onClick={() => setActiveTab('organization')}
+          >
+            Organization
+          </button>
+        </div>
+        
+        <div className="features-grid">
+          {features[activeTab].map((feature) => (
+            <div 
+              key={feature.id}
+              className={`feature-card ${expandedFeature === feature.id ? 'expanded' : ''}`}
+              onClick={() => toggleFeature(feature.id)}
+            >
+              <div className="feature-header">
+                <span className="feature-icon">{feature.icon}</span>
+                <h3 className="feature-title">{feature.title}</h3>
+                <span className="feature-arrow">
+                  {expandedFeature === feature.id ? '▼' : '▶'}
+                </span>
+              </div>
+              <p className="feature-description">{feature.description}</p>
+              
+              {expandedFeature === feature.id && (
+                <div className="feature-details">
+                  {Array.isArray(feature.details) ? (
+                    <ul>
+                      {feature.details.map((detail, index) => (
+                        <li key={index}>{detail}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{feature.details}</p>
+                  )}
+                  <div className="feature-preview">
+                    {/* Placeholder for actual feature preview */}
+                    <div className="preview-box">
+                      {feature.id === 'aiChat' && '🤖 AI Chat Interface Preview'}
+                      {feature.id === 'timetable' && '📅 Timetable Preview'}
+                      {feature.id === 'notes' && '📝 Notes Grid Preview'}
+                      {feature.id === 'pdf' && '📚 PDF Viewer Preview'}
+                      {feature.id === 'gpa' && '📊 GPA Tracker Preview'}
+                    </div>
                   </div>
                 </div>
-              </div>
-            )}
-          </div>
-        ))}
-      </div>
-    </div>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>  
+    </section>
+
   );
 };
 

@@ -1,147 +1,170 @@
+/* Showcase Container Styling */
 .showcase-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #0f172a;
+  box-sizing: border-box;
+  padding: 20px 60px 50px 60px;
+}
+
+.showcase-header {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #fef6f6;
+}
+
+.showcase-subheader {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+/* Tabs */
+.filter-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  background: #e4e4e4;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  background: #ccc;
+}
+
+.tab-button.active {
+  background: #007bff;
+  color: white;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Feature Card */
+.feature-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card.expanded {
+  background-color: #eef6ff;
+  border-color: #b3d4fc;
+}
+
+/* Feature Header */
+.feature-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  font-size: 1.5rem;
+}
+
+.feature-title {
+  flex: 1;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.feature-arrow {
+  font-size: 1rem;
+  color: #999;
+}
+
+/* Description */
+.feature-description {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* Expanded Details */
+.feature-details {
+  margin-top: 15px;
+  font-size: 0.95rem;
+  color: #444;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.feature-details ul {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.feature-details ul li {
+  margin-bottom: 6px;
+  list-style-type: disc;
+}
+
+/* Preview Box */
+.feature-preview {
+  margin-top: 16px;
+}
+
+.preview-box {
+  background: #fff;
+  border: 1px dashed #aaa;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
   }
-  
-  .showcase-header {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .showcase-subheader {
-    text-align: center;
-    color: #7f8c8d;
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .filter-tabs {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 2rem;
-  }
-  
-  .tab-button {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 25px;
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-  
-  .tab-button.active {
-    background-color: #3498db;
-    color: white;
-  }
-  
-  .tab-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .feature-card {
-    background: white;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    border: 2px solid #e0e0e0;
-  }
-  
-  .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-    border-color: #3498db;
-  }
-  
-  .feature-card.expanded {
-    grid-column: 1 / -1;
-  }
-  
+}
+
+/* Responsive Touches */
+@media (max-width: 768px) {
   .feature-header {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .feature-icon {
-    font-size: 2rem;
+
+  .filter-tabs {
+    flex-direction: column;
+    gap: 10px;
   }
-  
-  .feature-title {
-    margin: 0;
-    flex-grow: 1;
-    color: #2c3e50;
-  }
-  
-  .feature-arrow {
-    font-size: 1.2rem;
-  }
-  
-  .feature-description {
-    color: #7f8c8d;
-    margin: 0;
-  }
-  
-  .feature-details {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #ecf0f1;
-    animation: fadeIn 0.3s ease;
-  }
-  
-  .feature-details ul {
-    padding-left: 1.5rem;
-    color: #34495e;
-  }
-  
-  .feature-details li {
-    margin-bottom: 0.5rem;
-  }
-  
-  .feature-preview {
-    margin-top: 1.5rem;
-    padding: 1.5rem;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    text-align: center;
-    color: #7f8c8d;
-  }
-  
+
   .preview-box {
-    min-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-size: 0.85rem;
   }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @media (max-width: 768px) {
-    .features-grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .filter-tabs {
-      flex-wrap: wrap;
-    }
-  }
+}

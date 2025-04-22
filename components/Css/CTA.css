@@ -1,0 +1,84 @@
+.cta-section {
+    width: 100%;
+    padding: 60px 60px 80px 20px;
+    background: #0f172a;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .cta-title {
+    font-size: 2.5rem;
+    color: #ffffff; /* blue-600 */
+    font-weight: 800;
+    margin-bottom: 20px;
+  }
+  
+  .cta-subtitle {
+    font-size: 1.125rem;
+    color: #4b5563; /* gray-600 */
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  
+  /* Buttons */
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 999px;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .cta-btn.playstore {
+    background-color: #2563eb;
+  }
+  
+  .cta-btn.playstore:hover {
+    background-color: #1e40af;
+    transform: scale(1.05);
+  }
+  
+  .cta-btn.explore {
+    background-color: #3b82f6;
+  }
+  
+  .cta-btn.explore:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+  }
+  
+  /* Icon Style */
+  .cta-icon {
+    font-size: 1.25rem;
+  }
+  
+  /* Responsive Goodness */
+  @media (max-width: 600px) {
+    .cta-title {
+      font-size: 2rem;
+    }
+  
+    .cta-subtitle {
+      font-size: 1rem;
+    }
+  
+    .cta-btn {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+  
